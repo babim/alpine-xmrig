@@ -9,8 +9,8 @@ I have also configured this image to run the miner as a dedicated  restricted us
 
 # How to use
 ```bash
-# docker run --restart unless-stopped --read-only -m 50M -c 512 bitnn/alpine-xmrig -o POOL01 -o POOL02 -u WALLET -p PASSWORD -k babim/xmrig
-# docker run --restart unless-stopped --read-only -m 50M -c 512 bitnn/alpine-xmrig -o pool.supportxmr.com:7777 -o xmr-eu.dwarfpool.com:8005 -u 41fRNzHaZmxH3Gc9d9bVCcLyKEbWvjrqmMb3jqbCyPuCNtbTpnrH6dw6mCuVqXaRhE3fXEe4U6PbKS1E41sJ5a1JRb7ztk3 -p x -k babim/xmrig
+# docker run --restart unless-stopped --read-only -m 50M -c 512 babim/xmrig -o POOL01 -o POOL02 -u WALLET -p PASSWORD -k
+# docker run --restart unless-stopped --read-only -m 50M -c 512 babim/xmrig -o pool.supportxmr.com:7777 -o xmr-eu.dwarfpool.com:8005 -u 41fRNzHaZmxH3Gc9d9bVCcLyKEbWvjrqmMb3jqbCyPuCNtbTpnrH6dw6mCuVqXaRhE3fXEe4U6PbKS1E41sJ5a1JRb7ztk3 -p x -k
 ```
 ## Docker Arguments
 `--restart unless-stopped`
