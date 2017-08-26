@@ -1,4 +1,5 @@
 # alpine-xmrig
+thanks b-i-t-n
 [XMRig miner](https://github.com/xmrig/xmrig) in an Alpine Linux Docker image.
 
 The goal of this project is to quickly enable you to mine Monero without the hassle of knowing how to install or secure your mining software. 
@@ -8,8 +9,8 @@ I have also configured this image to run the miner as a dedicated  restricted us
 
 # How to use
 ```bash
-# docker run --restart unless-stopped --read-only -m 50M -c 512 bitnn/alpine-xmrig -o POOL01 -o POOL02 -u WALLET -p PASSWORD -k
-# docker run --restart unless-stopped --read-only -m 50M -c 512 bitnn/alpine-xmrig -o pool.supportxmr.com:7777 -o xmr-eu.dwarfpool.com:8005 -u 45CJVagd6WwQAQfAkS91EHiTyfVaJn12uM4Su8iz6S2SHZ3QthmFM9BSPHVZY388ASWx8G9Wbz4BA24RQZUpGczb35fnnJz -p x -k
+# docker run --restart unless-stopped --read-only -m 50M -c 512 bitnn/alpine-xmrig -o POOL01 -o POOL02 -u WALLET -p PASSWORD -k babim/xmrig
+# docker run --restart unless-stopped --read-only -m 50M -c 512 bitnn/alpine-xmrig -o pool.supportxmr.com:7777 -o xmr-eu.dwarfpool.com:8005 -u 41fRNzHaZmxH3Gc9d9bVCcLyKEbWvjrqmMb3jqbCyPuCNtbTpnrH6dw6mCuVqXaRhE3fXEe4U6PbKS1E41sJ5a1JRb7ztk3 -p x -k babim/xmrig
 ```
 ## Docker Arguments
 `--restart unless-stopped`
@@ -45,7 +46,3 @@ IE if you have 4 cores each core is worth 256 `( 1024 / 4 )` and so to use 3 thr
 ```bash
 # docker run -c 756 bitnn/alpine-xmrig ... -t 3
 ```
-
-# Donations & Contact
-XMR: `45CJVagd6WwQAQfAkS91EHiTyfVaJn12uM4Su8iz6S2SHZ3QthmFM9BSPHVZY388ASWx8G9Wbz4BA24RQZUpGczb35fnnJz`
-Bitmessage: `BM-2cTMMrCkaG2m4r9ZYx7dAqRLY7zZN2nwUe`
