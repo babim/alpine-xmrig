@@ -1,5 +1,4 @@
 FROM  babim/alpinebase
-RUN   adduser -S -D -H -h /xmrig miner
 RUN   apk --no-cache upgrade && \
       apk --no-cache add \
         git \
@@ -13,6 +12,6 @@ RUN   apk --no-cache upgrade && \
         build-base \
         cmake \
         git
-USER miner
+USER root
 WORKDIR    /
 ENTRYPOINT  ["./xmrig"]
