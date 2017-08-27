@@ -4,6 +4,10 @@ thanks b-i-t-n
 
 [![](https://images.microbadger.com/badges/image/babim/xmrig.svg)](https://microbadger.com/images/babim/xmrig "Get your own image badge on microbadger.com")
 
+[![](https://images.microbadger.com/badges/image/babim/xmrig:nvidia.svg)](https://microbadger.com/images/babim/xmrig:nvidia "Get your own image badge on microbadger.com")
+
+[![](https://images.microbadger.com/badges/image/babim/xmrig:root.svg)](https://microbadger.com/images/babim/xmrig:root "Get your own image badge on microbadger.com")
+
 The goal of this project is to quickly enable you to mine Monero without the hassle of knowing how to install or secure your mining software. 
 
 Using an [Alpine Linux](https://www.alpinelinux.org/) container you get a very lightweight image ~4MB and the benefit of Alpine Linux's security model.
