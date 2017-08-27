@@ -2,7 +2,7 @@
 thanks b-i-t-n
 [XMRig miner](https://github.com/xmrig/xmrig) in an Alpine Linux Docker image.
 
-[![](https://images.microbadger.com/badges/image/babim/xmrig.svg)](https://microbadger.com/images/babim/xmrig "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/babim/xmrig:nvidia.svg)](https://microbadger.com/images/babim/xmrig:nvidia "Get your own image badge on microbadger.com")
 
 The goal of this project is to quickly enable you to mine Monero without the hassle of knowing how to install or secure your mining software. 
 
@@ -11,8 +11,8 @@ I have also configured this image to run the miner as a dedicated  restricted us
 
 # How to use
 ```bash
-# docker run --restart unless-stopped --read-only -m 50M -c 512 babim/xmrig -o POOL01 -o POOL02 -u WALLET -p PASSWORD -k
-# docker run --restart unless-stopped --read-only -m 50M -c 512 babim/xmrig -o pool.supportxmr.com:7777 -o xmr-eu.dwarfpool.com:8005 -u 41fRNzHaZmxH3Gc9d9bVCcLyKEbWvjrqmMb3jqbCyPuCNtbTpnrH6dw6mCuVqXaRhE3fXEe4U6PbKS1E41sJ5a1JRb7ztk3 -p x -k
+# nvidia-docker run --restart unless-stopped --read-only -m 50M -c 512 babim/xmrig:nvidia -o POOL01 -o POOL02 -u WALLET -p PASSWORD -k
+# nvidia-docker run --restart unless-stopped --read-only -m 50M -c 512 babim/xmrig:nvidia -o pool.supportxmr.com:7777 -o xmr-eu.dwarfpool.com:8005 -u 41fRNzHaZmxH3Gc9d9bVCcLyKEbWvjrqmMb3jqbCyPuCNtbTpnrH6dw6mCuVqXaRhE3fXEe4U6PbKS1E41sJ5a1JRb7ztk3 -p x -k
 ```
 ## Docker Arguments
 `--restart unless-stopped`
