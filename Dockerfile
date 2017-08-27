@@ -6,15 +6,13 @@ RUN   apk --no-cache upgrade && \
         cmake \
         libuv-dev \
         build-base && \
-      git clone https://github.com/xmrig/xmrig && \
-      cd xmrig && \
-      mkdir build && \
-      cmake -DCMAKE_BUILD_TYPE=Release . && \
-      make && \
+      git clone https://github.com/xmrig/xmrig && mv xmrig xmrig-dev && \
+      cd xmrig-dev && cmake -DCMAKE_BUILD_TYPE=Release . && \
+      make && mv xmrig ../ && cd ../ && rm -rf xmrig-dev && \
       apk del \
         build-base \
         cmake \
         git
 USER miner
-WORKDIR    /xmrig
+WORKDIR    /
 ENTRYPOINT  ["./xmrig"]
