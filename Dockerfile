@@ -14,4 +14,4 @@ RUN   apk --no-cache upgrade && \
         git
 USER root
 WORKDIR    /
-ENTRYPOINT  ["./xmrig"]
+ENTRYPOINT  ["./xmrig", "--donate-level=1"]
