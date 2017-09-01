@@ -6,4 +6,4 @@ RUN   git clone https://github.com/xmrig/xmrig-nvidia.git && mv xmrig-proxy xmri
       make && mv xmrig-nvidia / && cd ../../ && rm -rf xmrig-nvidia-dev
 RUN   apt-get purge -y git build-essential cmake && rm -rf /var/lib/apt/lists/**
 WORKDIR    /
-ENTRYPOINT ["./xmrig-nvidia"]
+ENTRYPOINT ["./xmrig-nvidia", "--donate-level=1"]
