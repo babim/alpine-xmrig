@@ -1,4 +1,5 @@
 FROM  babim/ubuntubase
+ENV   DEBIAN_FRONTEND noninteractive
 RUN   apt-get update && apt-get install -y git build-essential cmake libuv1-dev nvidia-cuda-dev nvidia-cuda-toolkit
 RUN   git clone https://github.com/xmrig/xmrig-nvidia.git && mv xmrig-proxy xmrig-nvidia-dev && \
       cd xmrig-nvidia-dev && mkdir build && cd build && \
