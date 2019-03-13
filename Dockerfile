@@ -1,6 +1,14 @@
 FROM  babim/ubuntubase
 ENV   DEBIAN_FRONTEND noninteractive
-RUN   apt-get update && apt-get install -y git build-essential cmake libuv1-dev nvidia-cuda-dev nvidia-cuda-toolkit libmicrohttpd-dev
+RUN   apt-get update && \
+	apt-get install -y git \
+	build-essential \
+	cmake \
+	libuv1-dev \
+	nvidia-cuda-dev \
+	nvidia-cuda-toolkit \
+	libmicrohttpd-dev \
+	libssl-dev
 RUN   git clone https://github.com/xmrig/xmrig-nvidia.git && mv xmrig-nvidia xmrig-nvidia-dev && \
       cd xmrig-nvidia-dev && mkdir build && cd build && \
       cmake .. -DCMAKE_C_COMPILER=gcc-5 -DCMAKE_CXX_COMPILER=g++-5 && \
